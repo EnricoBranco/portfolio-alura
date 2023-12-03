@@ -5,14 +5,28 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;400&display=swap');
+
 body {
-    /* HEIGHT especifica a altura do conteúdo de um elemento e o vh é relacionado com a altura do viewport */
-    height: 100vh;
     /* BOX-SIZING BORDERBOX faz com que a largura e altura de um elemento considerem a tag pai */
     box-sizing: border-box;
     background-color: black;
     color: #F6F6F6;
+}
+
+.cabecalho {
+    padding: 2% 0 0 12%;   
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 50px;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #22D4FD;
 }
 
 .titulo-destaque {
@@ -20,7 +34,7 @@ body {
 }
 
 .apresentacao {
-    margin: 10% 10%;
+    padding: 4% 12%;
     /* DISPLAY é usado para controlar facilmente a disposição, o espaçamento, a ordem e o alinhamento dos elementos filhos */
     display: flex;
     /* ALIGN-ITEMS controla como os itens são alinhados verticalmente dentro do contêiner flexível. */
@@ -28,6 +42,7 @@ body {
     /* JUSTIFY-CONTENT permite controlar o posicionamento dos itens flexíveis dentro do contêiner flexível ao longo do eixo principal. */
     justify-content: space-between;
 }
+
 
 .apresentacao__conteudo {
     width: 615px;
@@ -50,13 +65,25 @@ body {
 
 .apresentacao__links {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .apresentacao__links__botao {
-    background-color: #22D4FD;
-    width: 280px;
-    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid #22D4FD;
+    width: 360px;
+    border-radius: 8px;
     /* TEXT-ALIGN muda a posição do texto na horizontal */
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -65,5 +92,21 @@ body {
     padding: 21.5px 0;
     /* text-decoration tira o efeito de link da âncora */
     text-decoration: none;
-    color: black;
+    color: #F6F6F6;
+    
 }
+
+.apresentacao__links__botao:hover {
+    background-color: #272727;
+}
+
+.rodape {
+    text-align: center;
+    padding: 23.64px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    color: black;
+    background-color: #22D4FD;
+}
+
