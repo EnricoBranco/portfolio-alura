@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;400&display=swap');
+
+:root {
+    --cor-de-fundo: black;
+    --cor-destaque: #22D4FD;
+    --cor-texto: #F6F6F6;
+    --cor-hover: #272727;
+}
+
 * {
-    /* MARGIN controla a área vazia entre o elemento e outros elementos próximos */
     margin: 0;
-    /* PADDING define o espaço entre o conteúdo de um elemento HTML e sua borda */
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;400&display=swap');
-
 body {
-    /* BOX-SIZING BORDERBOX faz com que a largura e altura de um elemento considerem a tag pai */
     box-sizing: border-box;
-    background-color: black;
-    color: #F6F6F6;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto);
 }
 
 .cabecalho {
@@ -26,40 +30,35 @@ body {
 .cabecalho__menu__link {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    color: #22D4FD;
-}
-
-.titulo-destaque {
-    color: #22D4FD;
+    color: var(--cor-destaque);
 }
 
 .apresentacao {
     padding: 4% 12%;
-    /* DISPLAY é usado para controlar facilmente a disposição, o espaçamento, a ordem e o alinhamento dos elementos filhos */
     display: flex;
-    /* ALIGN-ITEMS controla como os itens são alinhados verticalmente dentro do contêiner flexível. */
     align-items: center;
-    /* JUSTIFY-CONTENT permite controlar o posicionamento dos itens flexíveis dentro do contêiner flexível ao longo do eixo principal. */
     justify-content: space-between;
+    gap: 82px;
 }
 
-
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
-    /* FLEX-DIRECTION muda a posição padrão do posicionamento, neste caso deixa em colunas */
     flex-direction: column;
-    /* GAP muda o espaçamento dos elementos filhos */
     gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: 'Krona One', sans-serif;
 }
 
+.titulo-destaque {
+    color: var(--cor-destaque);
+}
+
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -74,39 +73,58 @@ body {
 .apresentacao__links__subtitulo {
     font-family: 'Krona One', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .apresentacao__links__botao {
     display: flex;
     justify-content: center;
     gap: 16px;
-    border: 2px solid #22D4FD;
+    border: 2px solid var(--cor-destaque);
     width: 360px;
     border-radius: 8px;
-    /* TEXT-ALIGN muda a posição do texto na horizontal */
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    /* PADDING primero valor altera na horizontal e o segundo na vertical */
+    font-size: 1.5rem;
     padding: 21.5px 0;
-    /* text-decoration tira o efeito de link da âncora */
     text-decoration: none;
-    color: #F6F6F6;
-    
+    color: var(--cor-texto);
 }
 
 .apresentacao__links__botao:hover {
-    background-color: #272727;
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 .rodape {
     text-align: center;
     padding: 23.64px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 24px;
-    color: black;
-    background-color: #22D4FD;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-de-fundo);
+    background-color: var(--cor-destaque);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }
 
